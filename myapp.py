@@ -10,8 +10,10 @@ st.title("Twitter scrapping App")
 
 text = st.text_input("enter your text","")
 number = st.number_input("enter your number")
+startDate = st.date_input("enter start date")
+endDate = st.date_input("enter end date")
 
-scraper=sntwitter.TwitterSearchScraper(text) 
+scraper = sntwitter.TwitterSearchScraper(f"text since:{startDate} until:{endDate}")
 
 tweets1=[]
 tweets2=[]
